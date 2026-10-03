@@ -9,13 +9,11 @@ A read-only local dashboard for your [Claude Code](https://code.claude.com) conf
 ## Features
 
 - **Everything in one view:** skills, commands, agents, workflows, plans, CLAUDE.md / AGENTS.md, rules, output styles, hooks, MCP servers and settings.
-- **Scope labels:** each item is tagged `global`, `projeto` (project) or `local` (project-only MCP servers), with filters.
+- **Scope labels:** each item is tagged `global`, `project` or `local` (project-only MCP servers), with filters.
 - **Search** across names, descriptions and content (press `/`).
 - **Detail panel** with frontmatter and rendered Markdown.
 - **Always current:** data reloads every time you return to the browser tab.
 - **Works in any project:** run it from the project folder.
-
-The interface is currently in Portuguese.
 
 ## Safety
 
@@ -67,7 +65,9 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 
 ### Updating
 
-Run the same download command again (`curl` on macOS/Linux, `Invoke-WebRequest` on Windows).
+Run the same download command again (`curl` on macOS/Linux, `Invoke-WebRequest` on Windows). This overwrites `~/bin/claude-dash.mjs` with the latest version from `main`.
+
+Check which version you have with `claude-dash --version` (also shown next to the title in the sidebar).
 
 ## Usage
 
@@ -83,6 +83,7 @@ Your browser opens at `http://localhost:4777`. If that port is busy, the next fr
 | `claude-dash ~/other/project` | Show a different project without changing folder |
 | `--port 5000` | Use a specific port |
 | `--no-open` | Do not open the browser automatically |
+| `--version` | Print the version and exit |
 
 Stop it with `Ctrl+C`.
 
